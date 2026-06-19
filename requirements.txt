@@ -1,0 +1,7 @@
+hola
+
+Flask
+Flask-SQLAlchemy
+PyMySQL
+python-dotenv
+gunicorn
