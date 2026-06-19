@@ -21,6 +21,11 @@ class Producto(db.Model):
     precio = db.Column(db.Float, nullable=False)
     stock = db.Column(db.Integer, nullable=False)
 
+
+
+with app.app_context():
+        db.create_all()    
+
 # RUTA PRINCIPAL
 
 @app.route('/')
@@ -89,7 +94,4 @@ def eliminar(id):
 
 if __name__ == '__main__':
 
-    with app.app_context():
-        db.create_all()
-
-    app.run(debug=True, port=8000)
+    app.run(debug=True)
